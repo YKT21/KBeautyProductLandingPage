@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-image: url("image/tiffany-nguyen-1dvIeM57k3I-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: #fd814f;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+}
+.logo{
+    margin: 1em;
+}
+nav ul{
+    list-style: none;  
+    width: 100%;
+    display: flex;
+}
+nav li{
+    padding: 0px 30px;
+}
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #7e0202;
+    font-weight: bold;
+}
+nav a:hover{
+    text-decoration: 2px solid #ffbb01 underline;
+}
+main{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+#brand h2, #products h2{
+    padding-top: 3em;
+}
+h2{
+    font-size: 2em;
+    color: #7e0202;
+    padding: 30px 30px 0px;
+}
+h4, h5{
+    text-align: center;
+    color: #7e0202;
+    font-size: 1em;
+}
+p{
+    line-height: 1.5em;
+    text-align: center;
+    padding: 20px;
+}
+/*center iframe video*/
+.container{
+    text-align: center;
+    width: 100%;
+}
+/*Flexbox*/
+.productsDescription{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.intro{
+    flex-basis: 100%;
+    background: #ffb29f;
+    margin: 1em;
+    padding: 20px;
+}
+.intro p{
+    line-height: 1.5em;
+    padding-bottom: 15px;
+}
+.intro li{
+    line-height: 1.3em;
+    padding: 8px 12px;
+    list-style: none;
+}
+.products-img{
+    text-align: center;
+    width: 100%;
+}
+input{
+    display: block;
+    margin: 1em auto;
+}
+input[type=email]{
+    width: 30%;
+    padding: 7px;
+    border: 2px solid #7e0202;
+    border-radius: 5px; 
+    background: transparent;
+    color: #775365;
+       
+}
+input[type=submit]{
+    width: 10%;
+    padding: 5px;
+    background:transparent;
+    border: 2px solid #775365;
+    border-radius: 5px; 
+}
+input[type=submit]:hover{
+    font-weight: bold;
+    background-color: #8a4646;
+}
+span{
+    color: #080808;
+    display: flex;
+    justify-content: center;
+    font-size: .7em;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2em;
+}
+/*Responsive screen*/
+@media screen and (max-width: 650px) {
+    header, main{
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul, nav li{
+        display: block;
+        text-align: center;
+        line-height: 1.5em;
+        width: 100%;
+    }  
+    iframe{
+        width: 90%;
+    } 
+    .productsDescription{
+        flex-direction: column;
+    }  
+    input[type=email]{
+        width: 60%;
+    }
+    input[type=submit]{
+        width: 30%;
+    }
+    #brand h2{
+        padding-top: 5em;
+    }
+    #products h2{
+        padding-top: 1.5em;
+    }
+}
+@media screen and (max-width: 400px) {
+    header, main{
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+    }
+    nav ul, nav li{
+        display: block;
+        text-align: center;
+        line-height: 1.5em;
+        width: 100%;
+        overflow: hidden;
+    }  
+    iframe{
+        width: 85%;
+    } 
+    .productsDescription{
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+    }     
+}
